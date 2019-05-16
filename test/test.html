@@ -8,10 +8,13 @@
     <script src="/node_modules/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
+    <div id="hello-component"><b>HELLO!!!!!!</b></div>
     
 
     <!--scripts-->
     <script type="text/babel" src="/radonjs/radon-models.js"></script>
+    <script type="text/babel" src="/radonjs/incode.js"></script>
+    <script type="text/babel" src="/radonjs/radon-components.js"></script>
     <script type="text/babel">
         class MyFirstModel extends RadonModel {
             data
@@ -29,6 +32,7 @@
             alert(modelName)
         })
         modelInstance.setData("HELLO!!")
+        var myC=new StaticComponent("hello", incode("hello-component"))
     </script>
 </body>
 </html>

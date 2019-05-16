@@ -23,6 +23,7 @@
   "homepage": "https://github.com/syntaxError99/RadonJS#readme",
   "dependencies": {
     "@babel/core": "^7.4.4",
-    "@babel/standalone": "^7.4.4"
+    "@babel/standalone": "^7.4.4",
+    "sync-request": "^6.1.0"
   }
 }
