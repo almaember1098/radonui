@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RadonJS demo</title>
+    <script src="/node_modules/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    
+
+    <!--scripts-->
+    <script type="text/babel" src="/radonjs/radon-models.js"></script>
+    <script type="text/babel">
+        class MyFirstModel extends RadonModel {
+            data
+            constructor() {
+                super("my-first-model hihi")
+            }
+            setData(d) {
+                this.data=d
+                this.notifyEveryone()
+            }
+        }
+
+        var modelInstance=new MyFirstModel()
+        modelInstance.subscribe(modelName=>{
+            alert(modelName)
+        })
+        modelInstance.setData("HELLO!!")
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "radonjs",
+  "version": "0.0.0",
+  "description": "A simple JavaScript(ES6) frontend framework.",
+  "main": "radonjs/radon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syntaxError99/RadonJS.git"
+  },
+  "keywords": [
+    "frontend",
+    "es6",
+    "babeljs"
+  ],
+  "author": "Hámori Ádám",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/syntaxError99/RadonJS/issues"
+  },
+  "homepage": "https://github.com/syntaxError99/RadonJS#readme",
+  "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/standalone": "^7.4.4"
+  }
+}
