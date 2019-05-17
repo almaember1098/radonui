@@ -15,5 +15,6 @@ to use it in a production app. And now, it's not builded to static JS,
 it's using Babel standalone. Later, we will build ONE radon.js file,
 that will make the framework more easy-to-use.
 But currently, you need to include Babel standalone and all the files
-in the `radonjs` folder. That's it!
-And, alternatively, you can install it using `npm install radonjs`!
+in the `radonui` folder. That's it!
+And, alternatively, you can install it using `npm install radonui`!
+P.S. this is on the view-feature branch.
