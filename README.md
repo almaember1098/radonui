@@ -11,8 +11,8 @@ That makes RadonJS lightweight.
 For example, Angular or React has 300+ dependencies.
 ## How to use it?
 Currently, RadonJS is in development, so it's not recommended
-to use it in a production app. And now it's not builded to static JS,
-it's using Babel standalone. Later, we will include ONE radon.js file,
+to use it in a production app. And now, it's not builded to static JS,
+it's using Babel standalone. Later, we will build ONE radon.js file,
 that will make the framework more easy-to-use.
 But currently, you need to include Babel standalone and all the files
 in the `radonjs` folder. That's it!
