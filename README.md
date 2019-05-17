@@ -16,3 +16,4 @@ it's using Babel standalone. Later, we will build ONE radon.js file,
 that will make the framework more easy-to-use.
 But currently, you need to include Babel standalone and all the files
 in the `radonjs` folder. That's it!
+And, alternatively, you can install it using `npm install radonjs`!
