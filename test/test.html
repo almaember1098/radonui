@@ -32,7 +32,8 @@
             alert(modelName)
         })
         modelInstance.setData("HELLO!!")
-        var myC=new StaticComponent("hello", incode("hello-component"))
+        ComponentManager.createComponent("hello",
+            new StaticComponent("hello", incode("hello-component")))
     </script>
 </body>
 </html>

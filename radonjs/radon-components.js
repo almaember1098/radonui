@@ -7,8 +7,11 @@ class ComponentManager {
     // creates a new component
     // example:
     // ComponentManager.createComponent('hello', new StaticComponent(null, null))
-    static createCompnent(name, object) {
+    static createComponent(name, object) {
         this._components[name]=object
+    }
+    static render(name, attr) {
+        return this._components[name].render(attr)
     }
 }
 
