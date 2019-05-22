@@ -1,5 +1,5 @@
 {
-  "name": "radonjs",
+  "name": "my-radonui",
   "version": "0.0.0",
   "description": "A simple JavaScript(ES6) frontend framework.",
   "main": "radonjs/radon.js",
