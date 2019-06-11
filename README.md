@@ -16,5 +16,4 @@ it's using Babel standalone. Later, we will build ONE `radon.js` file,
 that will make the framework more easy-to-use.
 But currently, you need to include Babel standalone and all the files
 in the `radonui` folder. That's it!
-And, alternatively, you can install it by using `npm install my-radonui`!
-P.S. this is on the view-feature branch.
+And, alternatively, you can install it by using `npm install my-radonui`
