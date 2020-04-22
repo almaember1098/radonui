@@ -13,13 +13,13 @@
 
     <!--scripts-->
     <script type="text/babel" src="/radonui/radon-models.js"></script>
-    <script type="text/babel" src="/radonui/incode.js"></script>
+    <script type="text/babel" src="/radonui/util.js"></script>
     <script type="text/babel" src="/radonui/radon-components.js"></script>
     <script type="text/babel">
-        class MyFirstModel extends RadonModel {
+        class ExampleModel extends RadonModel {
             data
             constructor() {
-                super("my-first-model hihi")
+                super("ExampleModel")
             }
             setData(d) {
                 this.data=d
@@ -27,13 +27,14 @@
             }
         }
 
-        var modelInstance=new MyFirstModel()
+        var modelInstance=new ExampleModel()
         modelInstance.subscribe(modelName=>{
             alert(modelName)
         })
         modelInstance.setData("HELLO!!")
         ComponentManager.createComponent("hello",
             new StaticComponent("hello", incode("hello-component")))
+        alert(ComponentManager.render("hello", null))
     </script>
 </body>
 </html>
