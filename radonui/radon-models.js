@@ -24,7 +24,7 @@ class RadonModel {
     // can identify the model
     notifyEveryone() {
         this._notify.forEach(func => {
-            func(this._modelName)
+            func(this._modelName, this)
         })
     }
 
