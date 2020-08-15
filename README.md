@@ -24,3 +24,5 @@ There is currently no tutorial or like (sadly).
 Documentation is also non-existent. However, I would  
 like to invite anyone interested in helping development  
 and documentation.
+
+Examples can be found under the "test" directory.
