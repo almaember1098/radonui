@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complex RadonUI test</title>
-    <script src="/node_modules/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel" src="/radonui/util.js"></script>
-    <script type="text/babel" src="/radonui/radon-models.js"></script>
-    <script type="text/babel" src="/radonui/radon-components.js"></script>
 </head>
 <body>
-    <div style="display: none;" id="components">
-        <!-- Here be components -->
-        <div id="aha">
-            <p>EXAMPLE!</p>
-        </div>
-    </div>
+    
+    <!-- Here be components -->
+    <template id="aha">
+        <p>EXAMPLE!</p>
+    </template>
+
     <div id="app">
         <!-- the app itself -->
-        <span rn-render="aha" rn-model="simpleModel">Will render in a minute</span>
-        <span rn-render="DynamicComponent" rn-model="simpleModel">Will render in a minute</span>
+        <span rn-render="aha" rn-model="globalStorage.simpleModel">Will render in a minute</span>
+        <span rn-render="DynamicComponent" rn-model="globalStorage.simpleModel">Will render in a minute</span>
     </div>
-    <script type="text/babel">
+    <script>
+        var globalStorage = {}
+    </script>
+    <script type="module">
+        import { RadonModel } from "/radonui/radon-models.js"
+        import { ComponentManager, StaticComponent,
+            RadonComponent, renderComponents } from "/radonui/radon-components.js"
+        import { incode } from "/radonui/util.js"
+
         // an example model
         class SimpleModel extends RadonModel {
             data
@@ -52,7 +56,7 @@
             new StaticComponent("aha", incode("aha")))
         ComponentManager.createComponent("DynamicComponent",
             new DynamicComponent())
-        var simpleModel=new SimpleModel()
+        globalStorage.simpleModel = new SimpleModel()
         renderComponents()
     </script>
 </body>
