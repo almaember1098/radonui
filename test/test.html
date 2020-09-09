@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RadonJS demo</title>
-    <script src="/node_modules/@babel/standalone/babel.min.js"></script>
+    <title>RadonUI demo</title>
 </head>
 <body>
-    <div id="hello-component"><b>HELLO!!!!!!</b></div>
+    <template id="hello-component"><b>HELLO!!!!!!</b></template>
     
 
     <!--scripts-->
-    <script type="text/babel" src="/radonui/radon-models.js"></script>
-    <script type="text/babel" src="/radonui/util.js"></script>
-    <script type="text/babel" src="/radonui/radon-components.js"></script>
-    <script type="text/babel">
+    <script type="module">
+        import { RadonModel } from "/radonui/radon-models.js"
+        import { ComponentManager, StaticComponent } from "/radonui/radon-components.js"
+        import { incode } from "/radonui/util.js"
+
         class ExampleModel extends RadonModel {
             data
             constructor() {
@@ -28,8 +28,8 @@
         }
 
         var modelInstance=new ExampleModel()
-        modelInstance.subscribe(modelName=>{
-            alert(modelName)
+        modelInstance.subscribe( (modelName, model)=>{
+            console.log(modelName, model)
         })
         modelInstance.setData("HELLO!!")
         ComponentManager.createComponent("hello",

@@ -48,7 +48,7 @@ export class StaticComponent extends RadonComponent {
 }
 
 // renders all and every component(s)
-function renderComponents() {
+export function renderComponents() {
     // names for the attributes helping with the rendering
     const attrNameComp="rn-render"
     const attrNameModel="rn-model"
