@@ -1,7 +1,7 @@
 // the component manager class
 // it manages components
 
-class ComponentManager {
+export class ComponentManager {
     static _components={}
 
     // creates a new component
@@ -20,7 +20,7 @@ class ComponentManager {
 // this is the base class of all
 // RadonJS components
 
-class RadonComponent {
+export class RadonComponent {
 
     // the name of the component
     _componentName
@@ -35,7 +35,7 @@ class RadonComponent {
 
 // static component baseclass
 
-class StaticComponent extends RadonComponent {
+export class StaticComponent extends RadonComponent {
     constructor(componentName, template) {
         super(componentName, template)
     }

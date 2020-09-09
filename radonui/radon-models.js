@@ -1,6 +1,6 @@
 
 // the base class of all models
-class RadonModel {
+export class RadonModel {
     // private field, list of functions to
     // notify on change
     // I know it's not really private, but don't
