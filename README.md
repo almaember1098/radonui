@@ -2,7 +2,7 @@ RadonUI
 =======
 
 RadonUI is a simple UI framework for ES6. It is supposed to be lightweight, and it is.  
-It has no dependencies (currently, Babel is there but will be removed soon)!
+It has no dependencies!
 
 Pros
 ----
